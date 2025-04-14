@@ -51,7 +51,7 @@ Ensures smooth operation and debugging.
 - **GitHub Actions (Future Scope)** → Can be integrated for CI/CD automation.  
 
 <p align="center">
-  <img src="github_ci_cd.png" alt="GitHub Actions (Future Scope)" width="600">
+  <img src="img\github_ci_cd.png" alt="GitHub Actions (Future Scope)" width="600">
 </p>
 
 ---

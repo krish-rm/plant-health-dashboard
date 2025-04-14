@@ -1,15 +1,15 @@
-# 🌱 Plant Health Analytics Project
+# 🌱 Plant Health Dashboard Project
 
 ## **Overview**
 This project aims to develop an end-to-end data pipeline that enables efficient monitoring of plant health using IoT sensor data, AI/ML analytics, and a web-based dashboard for visualization. The system automates data ingestion, processing, and deployment to provide real-time insights into plant health and environmental factors.
 
 <p align="center">
-  <img src="docs/dashboard_0.png" alt="" width="800">
+  <img src="docs/img/dashboard_0.png" alt="" width="800">
 </p>
 
 ## Problem Statement
 
-The **Plant Health Analytics Project** addresses the critical problem of monitoring plant health in agricultural environments. As agriculture becomes increasingly reliant on technology, there is a growing need to efficiently track and manage plant health. IoT (Internet of Things) sensors play a key role in collecting real-time environmental data from fields or greenhouses, which provides valuable insights into plant health. This data includes measurements such as temperature, humidity, soil moisture, nitrogen levels, and other key environmental factors.
+The **Plant Health Dashboard Project** addresses the critical problem of monitoring plant health in agricultural environments. As agriculture becomes increasingly reliant on technology, there is a growing need to efficiently track and manage plant health. IoT (Internet of Things) sensors play a key role in collecting real-time environmental data from fields or greenhouses, which provides valuable insights into plant health. This data includes measurements such as temperature, humidity, soil moisture, nitrogen levels, and other key environmental factors.
 
 ### Key Problems Addressed:
 1. **Inability to Monitor Plant Health Continuously:** Traditional plant health monitoring is labor-intensive and time-consuming. Farmers or researchers may not have the resources or time to manually check each plant's condition.
@@ -19,7 +19,7 @@ The **Plant Health Analytics Project** addresses the critical problem of monitor
 3. **Data Overload:** While the sensor data is valuable, manually analyzing large volumes of data from multiple sources can overwhelm users. It becomes crucial to automate data processing, cleaning, and analysis to provide actionable insights efficiently.
 
 ## Solution Provided:
-The **Plant Health Analytics Project** utilizes a comprehensive, cloud-based system that collects and processes IoT sensor data for plant health monitoring. The solution provides the following features:
+The **Plant Health Dashboard Project** utilizes a comprehensive, cloud-based system that collects and processes IoT sensor data for plant health monitoring. The solution provides the following features:
 
 1. **Automated Data Collection and Processing:**
    - **IoT Sensors:** The project leverages IoT sensors to gather environmental data continuously from the plants. These sensors measure factors such as temperature, humidity, soil moisture, and nitrogen levels at different times throughout the day (e.g., morning, afternoon, evening, and night).
@@ -86,5 +86,5 @@ The peer reviewers can refer to this guide for evaluation purpose [Peer review g
 Kaggle : https://www.kaggle.com/datasets/ziya07/plant-health-data
 
 ## Dashboard
-Cloud build url is live at : https://plant-health-dashboard-703716144022.us-central1.run.app/
+Cloud build url is live at : https://plant-health-dashboard-615598820843.us-central1.run.app/
 

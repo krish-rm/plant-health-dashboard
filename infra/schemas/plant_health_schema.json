@@ -1,0 +1,16 @@
+[
+  { "name": "Timestamp", "type": "TIMESTAMP", "mode": "REQUIRED" },
+  { "name": "Plant_ID", "type": "INTEGER", "mode": "REQUIRED" },
+  { "name": "Soil_Moisture", "type": "FLOAT", "mode": "NULLABLE" },
+  { "name": "Ambient_Temperature", "type": "FLOAT", "mode": "NULLABLE" },
+  { "name": "Soil_Temperature", "type": "FLOAT", "mode": "NULLABLE" },
+  { "name": "Humidity", "type": "FLOAT", "mode": "NULLABLE" },
+  { "name": "Light_Intensity", "type": "FLOAT", "mode": "NULLABLE" },
+  { "name": "Soil_pH", "type": "FLOAT", "mode": "NULLABLE" },
+  { "name": "Nitrogen_Level", "type": "FLOAT", "mode": "NULLABLE" },
+  { "name": "Phosphorus_Level", "type": "FLOAT", "mode": "NULLABLE" },
+  { "name": "Potassium_Level", "type": "FLOAT", "mode": "NULLABLE" },
+  { "name": "Chlorophyll_Content", "type": "FLOAT", "mode": "NULLABLE" },
+  { "name": "Electrochemical_Signal", "type": "FLOAT", "mode": "NULLABLE" },
+  { "name": "Plant_Health_Status", "type": "STRING", "mode": "NULLABLE" }
+]

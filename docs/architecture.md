@@ -3,7 +3,7 @@
 This architecture outlines the end-to-end data flow from **IoT sensors** to the **Plant Health Dashboard**, deployed on **Google Cloud Platform (GCP)**.
 
 <p align="center">
-  <img src="architecture.png" alt="Architecture Diagram" width="600">
+  <img src="img\architecture.png" alt="Architecture Diagram" width="600">
 </p>
 
 ---

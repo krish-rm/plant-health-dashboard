@@ -1,0 +1,8 @@
+{
+    "RAW_CSV_PATH": "gs://your-gcs-bucket/raw_data/plant_health_data.csv",
+    "INGESTED_DATA_PATH": "gs://your-gcs-bucket/processed_data/ingested_data.csv",
+    "PROCESSED_DATA_PATH": "gs://your-gcs-bucket/processed_data/cleaned_data.parquet",
+    "BQ_TABLE_NAME": "your-gcp-project.dataset.table",
+    "GCS_BUCKET_NAME": "gs://your-gcs-bucket",
+    "GCP_PROJECT_ID": "your-gcp-project"
+}
