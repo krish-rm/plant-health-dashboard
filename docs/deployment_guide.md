@@ -50,7 +50,7 @@ The Plant Health Dashboard processes sensor data collected four times daily; say
 3. **Review and Apply the Infrastructure Plan**
    ```bash
    terraform plan
-   terraform apply
+   terraform apply # add project_id and region declared in variables.tf
    ```
 
 This will:
@@ -89,7 +89,6 @@ plant-health-dashboard/
 ├── src/
 │   ├── automation/
 │   │   ├── airflow_dag.py
-│   │   ├── upload_to_gcs.py
 │   │   ├── ingest_data.py
 │   │   ├── clean_data.py
 │   │   └── load_to_bigquery.py
@@ -99,7 +98,7 @@ plant-health-dashboard/
 │   └── requirements.txt
 │
 ├── Dockerfile
-└── cloudbuild.yaml
+└── cloud_build.yaml
 ```
 
 
@@ -144,10 +143,10 @@ Note: It should take around 10-15 minutes for the composer environment creation
 # Upload raw data
 gsutil cp data/raw/plant_health_data.csv gs://your-gcs-bucket/raw_data/plant_health_data.csv
 
-# Upload DAG
+# Upload DAG from src folder
 gcloud composer environments storage dags import --environment $ENV_NAME --location $REGION --source airflow_dag.py
 
-# Upload ingestion + processing scripts
+# Upload ingestion + processing scripts from src folder
 gcloud composer environments storage dags import --environment $ENV_NAME --location $REGION --source ingest_data.py
 gcloud composer environments storage dags import --environment $ENV_NAME --location $REGION --source clean_data.py
 gcloud composer environments storage dags import --environment $ENV_NAME --location $REGION --source load_to_bigquery.py
@@ -180,7 +179,7 @@ Create a file named `airflow_variables.json` in your project root (or any folder
 1. Go to your **Cloud Composer Environment > Airflow UI**
 2. Navigate to the **Admin** tab → **Variables**
 3. Click on **"Import Variables"** (upper right corner)
-4. Upload the `airflow_variables.json` file from your local machine
+4. Upload the `airflow_variables.json` file from your local folder
 
 ⚠️ Note: Ensure all paths and project IDs in the JSON are correct before uploading.
 
@@ -229,7 +228,7 @@ gcloud composer environments run $ENV_NAME \
 
 #### 🪣 Data Lake (Google Cloud Storage)
 
-The sensor dataset is manually uploaded to GCS bucket.
+The dataset downloaded from Kaggle and available in the data folder is manually uploaded to GCS bucket.
 
 - GCS bucket structure with `/raw_data/` and `/processed_data/`  
 - Uploaded CSV file visible in GCS
@@ -250,7 +249,7 @@ Data transformation is handled in the DAG using Python (via Pandas) for:
 
 #### 🗄️ Data Warehouse (BigQuery)
 
-Cleaned data is loaded into BigQuery using the `google-cloud-bigquery` client in the Airflow DAG.
+Cleaned data is loaded into BigQuery using the DAG.
 
 - BigQuery table `plant_health` created  
 - Table schema and sample rows visible in BigQuery UI
@@ -260,6 +259,7 @@ Cleaned data is loaded into BigQuery using the `google-cloud-bigquery` client in
 ### 5️⃣ Deploying the Dashboard (CI/CD with Cloud Build)
 
 ```bash
+# Navigate to the project root
 # Submit build and deployment
 gcloud builds submit --config cloud_build.yaml .
 ```
