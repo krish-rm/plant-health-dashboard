@@ -50,7 +50,7 @@ The Plant Health Dashboard processes sensor data collected four times daily; say
 3. **Review and Apply the Infrastructure Plan**
    ```bash
    terraform plan
-   terraform apply # add project_id and region declared in variables.tf
+   terraform apply -var="project_id=$PROJECT_ID" -var="region=$REGION"
    ```
 
 This will:

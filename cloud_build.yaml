@@ -15,7 +15,7 @@ steps:
       '--platform', 'managed',
       '--region', 'us-central1',
       '--allow-unauthenticated',
-      '--set-env-vars', 'GCP_PROJECT_ID="your-project",BQ_DATASET="your-bq-dataset",BQ_TABLE=plant_health'
+      '--set-env-vars', 'GCP_PROJECT_ID="your-project",BQ_DATASET="your-bq-dataset",BQ_TABLE="your-bq-tablename"'
     ]
 
 timeout: 1800s
